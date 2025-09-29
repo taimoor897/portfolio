@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+
+
+
+    <style>
+
+
+  *{
+            font-family: Arial, Helvetica, sans-serif;
+
+
+
+        }
+
+
+body{
+    background-color: rgba(250, 181, 51);
+    animation: waveMove 6s ease-in-out infinite alternate;
+
+
+
+
+
+}
+        @keyframes waveMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50px); }
+}
+
+
+
+
+
+
+
+
+.book {
+      display: flex;
+      
+      background: #fff;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+      width: 60vw;
+      margin-left: 220px;
+    }
+
+    .page {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .left-page {
+      border-right: 1px solid #ddd;
+      background: #fafafa;
+    }
+
+    .page h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #f9b233;
+      display: inline-block;
+    }
+
+    .page p {
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    .page .section {
+      margin-bottom: 25px;
+    }
+
+    /* Optional: page number */
+    .page::after {
+      content: attr(data-page);
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+
+
+
+        .download-btn {
+      margin: 20px;
+      padding: 12px 20px;
+      background: #f9b233;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .download-btn:hover {
+      background: #e09b1d;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media (max-width: 1024px) {
+      .book {
+        max-width: 90%;
+      }
+      .page {
+        padding: 25px;
+      }
+      .page h2 {
+        font-size: 20px;
+      }
+    }
+
+    /* Small tablets / large phones (<= 768px) */
+    @media (max-width: 768px) {
+      .book {
+        flex-direction: column;
+        max-width: 95%;
+      }
+      .left-page {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+      }
+      .page::after {
+        right: 15px;
+      }
+    }
+
+    /* Phones (<= 480px) */
+    @media (max-width: 480px) {
+      body {
+        animation: none; /* turn off background animation on very small screens */
+        padding: 10px;
+      }
+      .book {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .page {
+        padding: 20px;
+      }
+      .page h2 {
+        font-size: 18px;
+      }
+      .page p {
+        font-size: 14px;
+      }
+    }
+
+
+    @media (max-width: 768px) {
+  body {
+    animation: none; /* disables animation */
+  }
+}
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="book" id="cvSection">
+    <div class="page left-page" data-page="1">
+      <div class="section">
+        <h2>Profile&nbsp;<i class="fas fa-user"></i>
+</h2>
+        <p>Hello, I am Taimoor, a passionate Web developer with 3+ years of experience building full stack web applications.</p>
+      </div>
+      <div class="section">
+        <h2>Skills&nbsp;<i class="fas fa-bolt"></i>
+</h2>
+        <p>✔ Html , CSS , Javascript</p>
+        <p>✔ Python , Docker , Kubernetes</p>
+        <p>✔ Figma , Jenkins</p>
+      </div>
+         <div class="section">
+        <h2>Education&nbsp;<i class="fas fa-graduation-cap"></i>
+
+</h2>
+        <p>✔ Bs Software Engineering | Szabist Islamabad</p>
+        <p>✔ Fsc Pre Engineering | Islamabad College For Boys G/6/3</p>
+        <p>✔ Matriculation | The Educators</p>
+      </div>
+    </div>
+    <div class="page right-page" data-page="2">
+      <div class="section">
+        <h2>Projects&nbsp;<i class="fas fa-folder-open"></i>
+</h2>
+        <p><b>Portfolio Website</b> – Designed and developed a personal website to showcase my work.</p>
+        <p><b>AI Powered Phishing Detector</b> – Built by training a machine learning model random forest and react used for its frontend and flask for the backend.</p>
+        <p><b>To Do Web App</b> – Full stack To Do Web App Html and CSS for its frontend and node.js for its backend and mongodb for the database/p>
+      </div>
+      <div class="section">
+        <h2>Experience&nbsp;<i class="fas fa-briefcase"></i>
+</h2>
+        <p><b>Iesco</b> – IT Intern (2025)</p>
+        <p><b>Freelance</b> – (2022-2025)</p>
+         <button class="download-btn" id="downloadCv">
+    <i class="fas fa-download"></i> Download CV
+  </button>
+        <p>.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
+  
+    document.getElementById("downloadCv").addEventListener("click", () => {
+  const cv = document.getElementById("cvSection");
+
+  const opt = {
+    margin:       0,
+    filename:     'Taimoor-CV.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 2, useCORS: true },
+    jsPDF:        { unit: 'px', format: 'a4', orientation: 'portrait' }
+  };
+
+  html2pdf().set(opt).from(cv).save();
+});
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

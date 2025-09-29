@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            background-color: rgba(253, 184, 54);
+            animation: waveMove 6s ease-in-out infinite alternate;
+
+
+            
+        }
+
+        @keyframes waveMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50px); }
+}
+
+
+
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+
+
+
+        }
+
+        .card{
+
+
+            background-color: rgba(249, 250, 255);
+            height: 80vh;
+            width: 80vw;
+            margin-top: 50px;
+            margin-left: 100px;
+            border-radius: 10px;
+            display: flex;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeSlide 1s ease-out forwards;
+
+            
+        }
+
+         .card:hover{
+
+
+
+            transform: translateY(-10px);
+        }
+
+
+
+        @keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+       
+        .card h2{
+            line-height: 1.5;
+            margin-left: 20px;
+            font-size: xx-large;
+
+
+
+
+        }
+        .btn{
+            background-color: rgba(249, 199, 48);
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+             margin-left: 20px;
+             transition: all 0.3s ease;
+             font-weight: bold;
+            
+
+
+
+        }
+
+
+        .btn:hover{
+              transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(249, 178, 51, 0.5);
+  cursor: pointer;
+
+
+
+
+        }
+
+        .btn1{
+            background-color: rgba(249, 250, 255);
+            border: 1px solid black;
+            padding: 9px;
+            border-radius: 6px;
+             margin-left: 20px;
+
+
+
+        }
+
+
+        .btn1:hover{
+            cursor: pointer;
+
+
+
+        }
+        .card p{
+            line-height: 1.5;
+             margin-left: 20px;
+
+
+
+        }
+        .c2{
+            display: flex;
+            justify-content: center;
+
+            background-color: rgba(253, 196, 53);
+            margin-left: 327px;
+            /*clip-path: ellipse(75% 100% at 75% 100%);*/
+             border-top-left-radius: 100% 100px;
+            border-bottom-left-radius: 100% 150px;
+            
+           
+
+
+        }
+        .c2 img{
+            height: 300px;
+            margin-top: 20px;
+            margin-left: 200px;
+            border-radius: 100px;
+             animation: float 4s ease-in-out infinite;
+
+
+
+
+        }
+
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+             50% { transform: translateY(-15px); }
+             100% { transform: translateY(0); }
+}
+
+
+        .p{
+
+
+            color: rgba(253, 196, 53);
+            font-size: x-large;
+            padding-left: 30px;
+            
+        }
+
+
+
+
+        .p1{
+            color: grey;
+            line-height: 1.5;
+
+
+
+
+        }
+
+        .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    margin-left: 4px;
+    background: currentColor;
+    animation: blink 0.8s steps(1) infinite;
+  }
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+
+
+
+
+
+
+  /* Base styles are already there from your code */
+
+/* Tablets and below (<= 1024px) */
+@media (max-width: 1024px) {
+  .card {
+    width: 90vw;
+    margin: 40px auto;
+    flex-direction: column;   /* stack vertically */
+    align-items: center;
+    height: auto;
+  }
+
+  .c1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .c2 {
+    margin: 20px 0;
+    border-radius: 50%;
+  }
+
+  .c2 img {
+    height: 220px;
+    margin: 0 auto;
+  }
+}
+
+/* Small tablets / large phones (<= 768px) */
+@media (max-width: 768px) {
+  .card {
+    width: 95vw;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+
+  .p {
+    font-size: large;
+    padding-left: 0;
+  }
+
+  .p1 {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .btn, .btn1 {
+    margin: 10px 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .c2 img {
+    height: 180px;
+  }
+}
+
+/* Phones (<= 480px) */
+@media (max-width: 480px) {
+  body {
+    animation: none; /* disable background animation for performance */
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .card h2 {
+    font-size: 20px;
+  }
+
+  .p {
+    font-size: 18px;
+  }
+
+  .p1 {
+    font-size: 14px;
+  }
+
+  .btn, .btn1 {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+  }
+
+  .c2 img {
+    height: 150px;
+  }
+}
+
+
+        
+
+       
+
+    
+
+
+
+
+
+    </style>
+
+
+
+
+
+
+</head>
+<body>
+
+
+    <div class="card">
+
+
+
+        <div class="c1">
+
+
+        <h2>Taimoor Shahid</h2>
+
+        <p class="p"><span id="typing"></span><span class="cursor"></span></p>
+        <h2>Hello, My Name<br>is Taimoor Shahid</h2>
+        <p class="p1">I am a full stack web developer with skills in Html , CSS  ,Javascript <br> and frameworks such as  react <br><span style="margin-left: 42px;"> and node.js</span></p>
+
+        <button onclick="window.location.href='pages.html'" class="btn">Profile</button>
+        <button onclick="window.location.href='https://www.linkedin.com/in/taimoor-shahid-398294313/'" class="btn1">LinkedIn</button>
+        </div>
+
+
+         <div class="c2">
+        <img src="pic2.png" alt="">
+
+        
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+  const text = "Web Developer";   // what to type
+  const speed = 120;              // typing speed
+  const pause = 1000;             // pause before restart
+  const typingEl = document.getElementById("typing");
+
+  function typeWriter() {
+    let i = 0;
+    typingEl.textContent = "";
+
+    function type() {
+      if (i < text.length) {
+        typingEl.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      } else {
+        // full word typed → wait → clear and restart
+        setTimeout(() => {
+          typingEl.textContent = "";
+          i = 0;
+          type();
+        }, pause);
+      }
+    }
+
+    type();
+  }
+
+  document.addEventListener("DOMContentLoaded", typeWriter);
+</script>
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
