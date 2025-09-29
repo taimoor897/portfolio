@@ -30,5 +30,5 @@ It’s a simple two-page site that showcases my profile and provides a downloada
 
 1. Clone or download this repository:
    ```bash
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/taimoor897/portfolio.git
    
