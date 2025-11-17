@@ -133,61 +133,94 @@ body{
 
 
 
-    @media (max-width: 1024px) {
-      .book {
-        max-width: 90%;
-      }
-      .page {
-        padding: 25px;
-      }
-      .page h2 {
-        font-size: 20px;
-      }
-    }
+   /* Default (desktops) stays the same */
 
-    /* Small tablets / large phones (<= 768px) */
-    @media (max-width: 768px) {
-      .book {
-        flex-direction: column;
-        max-width: 95%;
-      }
-      .left-page {
-        border-right: none;
-        border-bottom: 1px solid #ddd;
-      }
-      .page::after {
-        right: 15px;
-      }
-    }
-
-    /* Phones (<= 480px) */
-    @media (max-width: 480px) {
-      body {
-        animation: none; /* turn off background animation on very small screens */
-        padding: 10px;
-      }
-      .book {
-        width: 100%;
-        border-radius: 0;
-        box-shadow: none;
-      }
-      .page {
-        padding: 20px;
-      }
-      .page h2 {
-        font-size: 18px;
-      }
-      .page p {
-        font-size: 14px;
-      }
-    }
-
-
-    @media (max-width: 768px) {
+/* ----------- Large Tablets (<= 1024px) ----------- */
+@media (max-width: 1024px) {
+  .book {
+    width: 80vw;
+    margin: 40px auto; /* centers the book */
+  }
   body {
-    animation: none; /* disables animation */
+    animation: none; /* stop shifting background */
   }
 }
+
+/* ----------- Tablets / Large Phones (<= 768px) ----------- */
+@media (max-width: 768px) {
+  body {
+    animation: none; /* disable animation */
+    padding: 0;
+  }
+
+  .book {
+    width: 95vw;
+    margin: 20px auto;
+    flex-direction: column;
+  }
+
+  .left-page {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .page {
+    padding: 25px;
+  }
+
+  .page h2 {
+    font-size: 20px;
+  }
+}
+
+/* ----------- Small Phones (<= 480px) ----------- */
+@media (max-width: 480px) {
+  body {
+    animation: none;
+    padding: 5px;
+    overflow-x: hidden; /* prevents horizontal scrolling */
+  }
+
+  .book {
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .page {
+    padding: 18px;
+  }
+
+  .page h2 {
+    font-size: 18px;
+  }
+
+  .page p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* ----------- Very Small Devices (<= 360px) ----------- */
+@media (max-width: 360px) {
+  .page {
+    padding: 15px;
+  }
+
+  .page h2 {
+    font-size: 16px;
+  }
+
+  .page p {
+    font-size: 13px;
+  }
+
+  .book {
+    width: 100%;
+  }
+}
+
 
 
 
@@ -295,6 +328,7 @@ body{
 </body>
 
 </html>
+
 
 
 
