@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work Videos</title>
+    <link rel="shortcut icon" href="star.png" type="image/x-icon">
+
+    <style>
+        body{
+            background-color: rgba(253, 184, 54);
+            animation: waveMove 6s ease-in-out infinite alternate;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        @keyframes waveMove {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50px); }
+        }
+
+        .card {
+            background-color: rgba(249, 250, 255);
+            min-height: 80vh;
+            width: 85vw;
+            margin: 50px auto;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            animation: fadeSlide 1s ease-out forwards;
+        }
+
+        @keyframes fadeSlide {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .video-frame {
+            background: white;
+            padding: 12px;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: popIn 0.7s ease forwards;
+            opacity: 0;
+            
+        }
+
+        @keyframes popIn {
+            0% { opacity: 0; transform: scale(0.8) translateY(20px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .video-frame:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .back-btn {
+            background-color: rgba(249, 199, 48);
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(249, 178, 51, 0.5);
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 500px) {
+            h1 { font-size: 28px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <button onclick="window.location.href='index.html'" class="back-btn">⬅ Back</button>
+
+        <h1>My Work Videos</h1>
+
+        <div class="video-grid">
+
+            <!-- VIDEO 1 -->
+             <div class="video-frame">
+    <iframe 
+        src="https://streamable.com/e/85yb8b"
+         width="350"
+        height="250"
+        
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+</div>
+
+            
+
+            <!-- VIDEO 2 -->
+             <div class="video-frame">
+    <iframe 
+        src="https://streamable.com/e/ivdk0j"
+         width="350"
+        height="250"
+       
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+</div>
+
+            
+
+            <!-- VIDEO 3 -->
+             <div class="video-frame">
+    <iframe 
+        src="https://streamable.com/e/va792m"
+         width="350"
+        height="250"
+        
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+</div>
+
+   
+
+
+        </div>
+
+    </div>
+
+</body>
+</html>
