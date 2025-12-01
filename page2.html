@@ -90,13 +90,61 @@
             box-shadow: 0 8px 20px rgba(249, 178, 51, 0.5);
         }
 
+
+        .whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+}
+
+/* Small screens */
+@media (max-width: 500px) {
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+
         /* Responsive tweaks */
         @media (max-width: 500px) {
             h1 { font-size: 28px; }
-        }
 
 
-        /* ===========================
+
+
+
+
+
+            /* ===========================
       EXTRA LARGE SCREENS
    =========================== */
 @media (min-width: 1400px) {
@@ -208,16 +256,7 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-        
+        }
     </style>
 </head>
 
@@ -228,6 +267,14 @@
         <button onclick="window.location.href='index.html'" class="back-btn">⬅ Back</button>
 
         <h1>My Work Videos</h1>
+        <a href="https://wa.me/923471351552" class="whatsapp-btn" target="_blank">
+    <svg viewBox="0 0 32 32" width="30" height="30" fill="white">
+        <path d="M16.001 2.666c-7.364 0-13.334 5.97-13.334 13.334 0 2.353.613 4.65 1.78 6.68L2.666 29.334l6.84-1.761c1.96 1.07 4.18 1.63 6.494 1.63h.004c7.364 0 13.334-5.97 13.334-13.334 0-3.563-1.387-6.914-3.907-9.434s-5.87-3.912-9.434-3.912zm0 24c-2.04 0-4.04-.52-5.81-1.5l-.42-.24-4.06 1.05 1.08-3.96-.28-.41a10.63 10.63 0 01-1.69-5.82c0-5.893 4.807-10.667 10.667-10.667 2.84 0 5.507 1.103 7.513 3.107 2.007 2.006 3.12 4.673 3.12 7.513 0 5.893-4.807 10.667-10.667 10.667zm6.147-7.84c-.327-.164-1.94-.96-2.24-1.067-.3-.107-.52-.164-.74.164-.22.327-.847 1.067-1.04 1.287-.193.22-.38.247-.707.083-.327-.164-1.38-.51-2.63-1.626-.972-.867-1.63-1.94-1.823-2.267-.193-.327-.02-.503.147-.667.151-.15.327-.393.49-.59.164-.197.22-.327.327-.547.107-.22.053-.41-.027-.574-.08-.164-.74-1.787-1.013-2.447-.267-.64-.54-.553-.74-.563l-.633-.013c-.22 0-.574.083-.874.393-.3.31-1.147 1.12-1.147 2.727 0 1.607 1.173 3.16 1.34 3.38.164.22 2.307 3.52 5.587 4.947.78.337 1.387.54 1.86.693.78.247 1.487.213 2.047.127.624-.093 1.94-.793 2.214-1.56.273-.767.273-1.427.193-1.56-.08-.133-.293-.213-.62-.377z"/>
+    </svg>
+</a>
+
+  
+
 
         <div class="video-grid">
 
