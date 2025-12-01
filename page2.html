@@ -94,6 +94,130 @@
         @media (max-width: 500px) {
             h1 { font-size: 28px; }
         }
+
+
+        /* ===========================
+      EXTRA LARGE SCREENS
+   =========================== */
+@media (min-width: 1400px) {
+    .card {
+        width: 60vw;
+    }
+    h1 {
+        font-size: 48px;
+    }
+}
+
+/* ===========================
+      LARGE LAPTOPS
+   =========================== */
+@media (max-width: 1200px) {
+    .card {
+        width: 75vw;
+    }
+    iframe {
+        width: 100%;
+        height: 260px;
+    }
+}
+
+/* ===========================
+      TABLETS (Landscape)
+   =========================== */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 34px;
+    }
+    .video-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    iframe {
+        height: 230px;
+    }
+}
+
+/* ===========================
+      TABLETS (Portrait)
+   =========================== */
+@media (max-width: 768px) {
+    .card {
+        width: 90vw;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .back-btn {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+    iframe {
+        height: 210px;
+    }
+}
+
+/* ===========================
+      LARGE PHONES
+   =========================== */
+@media (max-width: 600px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    .video-frame {
+        padding: 10px;
+    }
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+/* ===========================
+      SMALL PHONES (iPhone SE)
+   =========================== */
+@media (max-width: 450px) {
+    h1 {
+        font-size: 24px;
+    }
+    .card {
+        margin: 20px auto;
+        padding: 15px;
+    }
+    .back-btn {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+    iframe {
+        height: 180px;
+    }
+}
+
+/* ===========================
+      EXTRA SMALL DEVICES
+   =========================== */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 20px;
+    }
+    iframe {
+        height: 160px;
+    }
+    .video-frame {
+        padding: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+        
     </style>
 </head>
 
